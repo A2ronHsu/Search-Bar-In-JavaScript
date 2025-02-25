@@ -5,23 +5,23 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="style.css">
-   <script src="script.js" defer></script>
+   <script src="script.js" defer="defer"></script>
 </head>
 <body>
    <div class="search-wrapper">
       <label for="search">Search Users</label>
-      <input type="search" id="search">
+      <input type="search" id="search" data-search-input>
    </div>
 
-   <div class="user-card">
-      <template data-user-template>
-         <div class="card">
-            <div class="header" data-header>My name</div>
-            <div class="body" data-body>email@gmail.com</div>
-         </div>
-      </template>
+   <div class="user-card" data-user-cards-container>
+
    </div>
-   
-   
+
+   <template data-user-template>
+      <div class="card">
+         <div class="header" data-header>My name</div>
+         <div class="body" data-body>email@gmail.com</div>
+      </div>
+   </template>
 </body>
 </html>
