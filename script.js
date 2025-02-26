@@ -8,7 +8,7 @@ console.log(cards)
 
 searchInput.addEventListener("input", e => {
    const value = e.target.value.toLowerCase();
-
+   
    for (const card of cards) {
       const header = card.querySelector("[data-header]");
       const body = card.querySelector("[data-body]");
