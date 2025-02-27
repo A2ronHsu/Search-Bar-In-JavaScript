@@ -1,0 +1,21 @@
+{
+  "name": "search-bar-in-javascript",
+  "version": "1.0.0",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch '*.js' --ext js --exec 'node server.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A2ronHsu/Search-Bar-In-JavaScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A2ronHsu/Search-Bar-In-JavaScript/issues"
+  },
+  "homepage": "https://github.com/A2ronHsu/Search-Bar-In-JavaScript#readme",
+  "description": ""
+}
