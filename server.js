@@ -1,12 +1,14 @@
 import http from 'http';
-import Routes from './routes.js';
+import Router from './routes.js';
 
-const routes = new Routes();
+const router = new Router();
 
 const server = http.createServer((req,res)=>{
-   const validRoute = routes.route[req.url];
-   if(validRoute){
-      routes.route[req.url](req,res);
+   const route = router.route[req.url];
+   const validHttpMethod = req.method === 'GET';
+
+   if(route && validHttpMethod){
+      route(res);
    }else{
       res.writeHead(400,{"content-type":"text/plain"});
       res.end('notFound');

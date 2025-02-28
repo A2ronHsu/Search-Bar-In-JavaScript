@@ -1,11 +1,9 @@
-import http, { IncomingMessage, ServerResponse } from 'http';
+import http, {  ServerResponse } from 'http';
 import fs from 'fs';
 
 
-class Routes {
-   constructor(){
+class Router {
 
-   }
    route = {
       '/':this.indexRoute,
       '/style': this.styleRoute,
@@ -14,10 +12,10 @@ class Routes {
    };
    
 
-   indexRoute(req = new IncomingMessage(), res = new ServerResponse()){
+   indexRoute(res = new ServerResponse()){
       fs.readFile('./src/index.html', (err, data)=>{
          if(err){
-            res.writeHead(400, {'content-type':'text/plain'});
+            res.writeHead(404, {'content-type':'text/plain'});
             return res. end('incorrect patch');
          }
          res.writeHead(200, {"content-type":'text/html'});
@@ -25,7 +23,7 @@ class Routes {
       })
    };
 
-   styleRoute(req = new IncomingMessage(), res = new ServerResponse()){
+   styleRoute(res = new ServerResponse()){
       fs.readFile('./src/style.css',(err, data)=>{
          if(err){
             res.writeHead(400,{'content-type': 'text/plain'});
@@ -36,7 +34,7 @@ class Routes {
       })
    };
 
-   scritpRoute( req = new IncomingMessage(), res = new ServerResponse()){
+   scritpRoute( res = new ServerResponse()){
       fs.readFile('./src/script.js',(err, data)=>{
          if(err){
             res.writeHead(400,{'content-type': 'text/plain'});
@@ -48,4 +46,4 @@ class Routes {
    }
 }
 
-export default Routes;
+export default Router;
