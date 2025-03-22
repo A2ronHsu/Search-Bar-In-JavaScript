@@ -8,7 +8,6 @@ class Router {
       '/':this.indexRoute,
       '/style': this.styleRoute,
       '/script': this.scritpRoute
-      
    };
    
 
